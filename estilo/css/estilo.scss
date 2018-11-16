@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
+
+$cor_verde : #72bb53;
+$cor_preta : #444444;
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    .container-fluid {
+        
+
+
+        .primeira {
+            background-color: $cor_verde;
+            
+            .col-md-8 {
+                font-family: Lato;
+                color: $cor_preta;
+                h3 {
+                    padding: 10px 5px;
+                }
+            }
+
+
+            .col-md-2 .row .login {
+                color : $cor_preta;
+                text-decoration: none;
+                font-family: Lato;
+                text-align: right;
+                padding: 20px 55px;
+                border-left: 2px solid $cor_preta;
+
+
+                i {
+                    margin-right: 7px;  
+                }
+            }
+
+            .col-md-2 .row .cadastro {
+                color : $cor_preta;
+                font-family: Lato;
+                text-decoration: none;
+                font-family: Lato;
+                padding: 20px 50px;
+                border-left: 2px solid $cor_preta;
+                border-width: 0px 0px 0px 2px;
+
+                i {
+                    margin-right: 7px;  
+                }
+            }
+        }
+        
+        .segunda {
+            background-color: $cor_preta;
+            
+            .nav {
+                
+                .nav-item .nav-link {
+                    color: $cor_verde;
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    margin-top: auto;
+
+    .rodape {
+        background-color: $cor_preta;
+        color: white;
+
+        .texto_rodape{
+            margin-top: 5px;
+            font-size: 12px;
+            text-align: right;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

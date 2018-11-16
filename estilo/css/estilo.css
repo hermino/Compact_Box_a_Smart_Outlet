@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Roboto");
+html {
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; }
+  body .container-fluid .primeira {
+    background-color: #72bb53; }
+    body .container-fluid .primeira .col-md-8 {
+      font-family: Lato;
+      color: #444444; }
+      body .container-fluid .primeira .col-md-8 h3 {
+        padding: 10px 5px; }
+    body .container-fluid .primeira .col-md-2 .row .login {
+      color: #444444;
+      text-decoration: none;
+      font-family: Lato;
+      text-align: right;
+      padding: 20px 55px;
+      border-left: 2px solid #444444; }
+      body .container-fluid .primeira .col-md-2 .row .login i {
+        margin-right: 7px; }
+    body .container-fluid .primeira .col-md-2 .row .cadastro {
+      color: #444444;
+      font-family: Lato;
+      text-decoration: none;
+      font-family: Lato;
+      padding: 20px 50px;
+      border-left: 2px solid #444444;
+      border-width: 0px 0px 0px 2px; }
+      body .container-fluid .primeira .col-md-2 .row .cadastro i {
+        margin-right: 7px; }
+  body .container-fluid .segunda {
+    background-color: #444444; }
+    body .container-fluid .segunda .nav .nav-item .nav-link {
+      color: #72bb53; }
+
+footer {
+  margin-top: auto; }
+  footer .rodape {
+    background-color: #444444;
+    color: white; }
+    footer .rodape .texto_rodape {
+      margin-top: 5px;
+      font-size: 12px;
+      text-align: right; }
+
+/*# sourceMappingURL=estilo.css.map */

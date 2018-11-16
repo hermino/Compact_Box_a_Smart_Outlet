@@ -1,0 +1,44 @@
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    .barra_navegacao {
+        background-color: #72bb53;
+
+        .titulo {
+            padding: 20px 10px;
+        }
+
+        .botao {
+            margin-top: 22px;
+
+            .login {
+                margin-left: 20px;
+            }
+            .nav-link {
+                color: white;
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: auto;
+
+    .rodape {
+        background-color: #444444;
+        color: white;
+
+        .texto_rodape{
+            margin-top: 5px;
+            font-size: 12px;
+            text-align: right;
+        }
+    }
+}
