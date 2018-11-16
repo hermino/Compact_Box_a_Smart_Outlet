@@ -2,6 +2,7 @@
 
 $cor_verde : #72bb53;
 $cor_preta : #444444;
+$cor_cinza : #d2d0d0;
 
 html {
     height: 100%;
@@ -13,13 +14,11 @@ body {
     flex-direction: column;
     min-height: 100%;
 
-    .container-fluid {
-        
-
+    .pg-header{
 
         .primeira {
             background-color: $cor_verde;
-            
+
             .col-md-8 {
                 font-family: Lato;
                 color: $cor_preta;
@@ -34,12 +33,12 @@ body {
                 text-decoration: none;
                 font-family: Lato;
                 text-align: right;
-                padding: 20px 55px;
+                padding: 22px 65px;
                 border-left: 2px solid $cor_preta;
 
 
                 i {
-                    margin-right: 7px;  
+                    margin-right: 7px;
                 }
             }
 
@@ -48,23 +47,64 @@ body {
                 font-family: Lato;
                 text-decoration: none;
                 font-family: Lato;
-                padding: 20px 50px;
+                padding: 22px 55px;
                 border-left: 2px solid $cor_preta;
                 border-width: 0px 0px 0px 2px;
 
                 i {
-                    margin-right: 7px;  
+                    margin-right: 7px;
                 }
             }
         }
-        
+
         .segunda {
             background-color: $cor_preta;
-            
+
             .nav {
-                
+
                 .nav-item .nav-link {
                     color: $cor_verde;
+                }
+            }
+        }
+    }
+
+    .pg-login {
+
+        .primeira {
+
+            .box-1 {
+                margin-top: 100px;
+
+                .card {
+
+                    .card-header {
+                        background-color: $cor_preta;
+                        color: $cor_verde;
+                        font-family: Lato;
+
+                    }
+
+                    .card-body {
+                        background-color: $cor_preta;
+
+                        .input-group {
+                            border: 1px solid $cor_preta;
+                            border-radius: 6px 6px 6px 6px;
+
+                            .input-group-prepend {
+
+                                .input-group-text {
+                                    color: $cor_preta;
+                                    background-color: $cor_verde;
+                                }
+                            }
+                        }
+
+                        .btn-entrar {
+                            background-color: $cor_verde;
+                        }
+                    }
                 }
             }
         }
@@ -86,18 +126,3 @@ footer {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
