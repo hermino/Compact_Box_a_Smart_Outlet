@@ -9,49 +9,43 @@ body {
   min-height: 100%; }
   body .pg-header .primeira {
     background-color: #72bb53; }
-    body .pg-header .primeira .col-md-8 {
+    body .pg-header .primeira .col-md-9 {
       font-family: Lato;
       color: #444444; }
-      body .pg-header .primeira .col-md-8 h3 {
+      body .pg-header .primeira .col-md-9 h3 {
         padding: 10px 5px; }
-    body .pg-header .primeira .col-md-2 .row .login {
-      color: #444444;
-      text-decoration: none;
-      font-family: Lato;
-      text-align: right;
-      padding: 22px 65px;
-      border-left: 2px solid #444444; }
-      body .pg-header .primeira .col-md-2 .row .login i {
-        margin-right: 7px; }
-    body .pg-header .primeira .col-md-2 .row .cadastro {
-      color: #444444;
-      font-family: Lato;
-      text-decoration: none;
-      font-family: Lato;
-      padding: 22px 55px;
+    body .pg-header .primeira .col-md-3 .nav .nav-link {
       border-left: 2px solid #444444;
-      border-width: 0px 0px 0px 2px; }
-      body .pg-header .primeira .col-md-2 .row .cadastro i {
-        margin-right: 7px; }
+      text-align: center;
+      color: #444444; }
+    body .pg-header .primeira .col-md-3 .nav .login {
+      padding: 20px; }
+    body .pg-header .primeira .col-md-3 .nav .cadastro {
+      border-right: 2px solid #444444;
+      padding: 20px; }
   body .pg-header .segunda {
     background-color: #444444; }
-    body .pg-header .segunda .nav .nav-item .nav-link {
+    body .pg-header .segunda .col-md-9 .nav .nav-link {
+      border-right: 2px solid #72bb53;
+      text-align: center;
       color: #72bb53; }
   body .pg-login .primeira .box-1 {
     margin-top: 100px; }
-    body .pg-login .primeira .box-1 .card .card-header {
+  body .pg-login .primeira .box-2 {
+    margin-top: 100px; }
+    body .pg-login .primeira .box-2 .card .card-header {
       background-color: #444444;
       color: #72bb53;
       font-family: Lato; }
-    body .pg-login .primeira .box-1 .card .card-body {
+    body .pg-login .primeira .box-2 .card .card-body {
       background-color: #444444; }
-      body .pg-login .primeira .box-1 .card .card-body .input-group {
+      body .pg-login .primeira .box-2 .card .card-body .input-group {
         border: 1px solid #444444;
         border-radius: 6px 6px 6px 6px; }
-        body .pg-login .primeira .box-1 .card .card-body .input-group .input-group-prepend .input-group-text {
+        body .pg-login .primeira .box-2 .card .card-body .input-group .input-group-prepend .input-group-text {
           color: #444444;
           background-color: #72bb53; }
-      body .pg-login .primeira .box-1 .card .card-body .btn-entrar {
+      body .pg-login .primeira .box-2 .card .card-body .btn-entrar {
         background-color: #72bb53; }
 
 footer {

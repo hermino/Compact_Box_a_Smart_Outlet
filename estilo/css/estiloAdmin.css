@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Roboto");
+html {
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; }
+  body .container-fluid.pg-header-admin {
+    background-color: #72bb53; }
+    body .container-fluid.pg-header-admin .compact-box {
+      font-family: Lato;
+      color: #444444;
+      margin-top: 4px;
+      padding: 16px 10px; }
+    body .container-fluid.pg-header-admin .sair a:link {
+      color: #444444; }
+    body .container-fluid.pg-header-admin .sair a:visited {
+      color: #444444; }
+    body .container-fluid.pg-header-admin .sair .nav-link {
+      text-decoration: none;
+      margin-top: 15px; }
+    body .container-fluid.pg-header-admin .row.segunda {
+      background-color: #444444; }
+      body .container-fluid.pg-header-admin .row.segunda .col-md-5 .nav .nav-link {
+        border-right: 2px solid #72bb53;
+        text-align: center;
+        color: #72bb53; }
+  body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro {
+    background-color: #444444;
+    color: #72bb53;
+    font-family: Roboto;
+    margin: 20px 0px 20px 0px; }
+    body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro .btn-entrar {
+      background-color: #72bb53;
+      border: 1px solid #72bb53;
+      border-radius: 5px 5px 5px 5px; }
+    body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro .input-group-text {
+      background-color: #72bb53; }
+    body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro .btn-cadastrar {
+      background-color: #72bb53; }
+    body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro .btn-limpar {
+      background-color: #72bb53; }
+  body .pg-add-dpv .row.primeira .card.formulario-add-dpv {
+    background-color: #444444;
+    color: #72bb53;
+    margin-top: 20px;
+    font-family: Roboto; }
+    body .pg-add-dpv .row.primeira .card.formulario-add-dpv .input-group-text {
+      background-color: #72bb53; }
+    body .pg-add-dpv .row.primeira .card.formulario-add-dpv .btn.btn-success {
+      background-color: #72bb53;
+      border: 1px solid #72bb53;
+      border-radius: 5px 5px 5px 5px; }
+  body .pg-add-dpv .row.segunda .card.formulario-opr-dpv {
+    background-color: #444444;
+    color: #72bb53;
+    margin: 20px 0px 20px 0px;
+    font-family: Roboto; }
+    body .pg-add-dpv .row.segunda .card.formulario-opr-dpv .input-group-text {
+      background-color: #72bb53; }
+    body .pg-add-dpv .row.segunda .card.formulario-opr-dpv .btn.btn-success {
+      background-color: #72bb53;
+      border: 1px solid #72bb53;
+      border-radius: 5px 5px 5px 5px; }
+    body .pg-add-dpv .row.segunda .card.formulario-opr-dpv .wats {
+      font-size: 12px;
+      font-weight: bold; }
+  body footer {
+    margin-top: auto; }
+    body footer .rodape {
+      background-color: #444444;
+      color: #72bb53; }
+      body footer .rodape .texto_rodape {
+        margin-top: 5px;
+        font-size: 12px;
+        text-align: right; }
+
+/*# sourceMappingURL=estiloAdmin.css.map */

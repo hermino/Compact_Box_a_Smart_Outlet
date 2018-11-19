@@ -2,7 +2,6 @@
 
 $cor_verde : #72bb53;
 $cor_preta : #444444;
-$cor_cinza : #d2d0d0;
 
 html {
     height: 100%;
@@ -19,7 +18,7 @@ body {
         .primeira {
             background-color: $cor_verde;
 
-            .col-md-8 {
+            .col-md-9 {
                 font-family: Lato;
                 color: $cor_preta;
                 h3 {
@@ -27,43 +26,38 @@ body {
                 }
             }
 
+            .col-md-3 {
+                .nav {
+                    .nav-link {
+                        border-left: 2px solid $cor_preta;
+                        text-align: center;
+                        color: $cor_preta;
 
-            .col-md-2 .row .login {
-                color : $cor_preta;
-                text-decoration: none;
-                font-family: Lato;
-                text-align: right;
-                padding: 22px 65px;
-                border-left: 2px solid $cor_preta;
+                    }
 
+                    .login {
+                        padding: 20px;
+                    }
 
-                i {
-                    margin-right: 7px;
-                }
-            }
+                    .cadastro {
+                        border-right: 2px solid $cor_preta;
+                        padding: 20px;
+                    }
 
-            .col-md-2 .row .cadastro {
-                color : $cor_preta;
-                font-family: Lato;
-                text-decoration: none;
-                font-family: Lato;
-                padding: 22px 55px;
-                border-left: 2px solid $cor_preta;
-                border-width: 0px 0px 0px 2px;
-
-                i {
-                    margin-right: 7px;
                 }
             }
         }
 
         .segunda {
             background-color: $cor_preta;
+            .col-md-9 {
+                .nav {
+                    .nav-link {
+                        border-right: 2px solid $cor_verde;
+                        text-align: center;
+                        color: $cor_verde;
 
-            .nav {
-
-                .nav-item .nav-link {
-                    color: $cor_verde;
+                    }
                 }
             }
         }
@@ -74,6 +68,11 @@ body {
         .primeira {
 
             .box-1 {
+                margin-top: 100px;
+
+            }
+
+            .box-2 {
                 margin-top: 100px;
 
                 .card {

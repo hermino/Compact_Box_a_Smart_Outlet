@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
+
+$cor_azul : #15395C;
+$cor_cinza : #3F5866;
+$cor_base : #BDD3DE;
+$cor_branca : #F0F0DF;
+$cor_amarela : #FF8F00;
+$cor_preta : #444444;
+
+$cor_verde : #72bb53;
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    //Estilo do header
+    .container-fluid.pg-header-admin {
+        background-color: $cor_verde;
+
+        .compact-box {
+            font-family: Lato;
+            color: $cor_preta;
+            margin-top: 4px;
+            padding: 16px 10px;
+        }
+
+        .sair {
+
+            a:link {
+                color: $cor_preta;
+            }
+
+            a:visited {
+                color: $cor_preta;
+            }
+
+            .nav-link{
+                text-decoration: none;
+                margin-top: 15px;
+
+
+            }
+        }
+
+        //Segunda linha no grid
+        .row.segunda {
+            background-color: $cor_preta;
+            .col-md-5 {
+
+                .nav {
+
+                    .nav-link {
+                        border-right: 2px solid $cor_verde;
+                        text-align: center;
+                        color: $cor_verde;
+
+                    }
+                }
+            }
+        }
+    }
+    // Fim do estilo do header
+
+
+    //Estilo da página de casdastro dos dispositivos
+    .container.pg-cadastro {
+        .row {
+            .col-md-8 {
+
+                .card.formulario-cadastro {
+                    background-color: $cor_preta;
+                    color: $cor_verde;
+                    font-family: Roboto;
+                    margin: 20px 0px 20px 0px;
+
+                    .btn-entrar {
+                        background-color: $cor_verde;
+                        border: 1px solid $cor_verde;
+                        border-radius: 5px 5px 5px 5px;
+                    }
+
+                    .input-group-text {
+                        background-color: $cor_verde;
+                    }
+
+                    .btn-cadastrar {
+                        background-color: $cor_verde;
+                    }
+
+                    .btn-limpar {
+                        background-color: $cor_verde;
+                    }
+                }
+            }
+        }
+    }
+    // Fim do estilo da página de cadastro de dispositivos
+
+
+    //Estilo da página de adicionar dispositivos
+    .pg-add-dpv {
+
+        .row.primeira {
+
+            .card.formulario-add-dpv {
+                background-color: $cor_preta;
+                color: $cor_verde;
+                margin-top: 20px;
+                font-family: Roboto;
+
+                .input-group-text {
+                    background-color: $cor_verde;
+                }
+
+                .btn.btn-success {
+                    background-color: $cor_verde;
+                    border: 1px solid $cor_verde;
+                    border-radius: 5px 5px 5px 5px;
+                }
+            }
+
+        }
+
+        .row.segunda {
+
+            .card.formulario-opr-dpv {
+                background-color: $cor_preta;
+                color: $cor_verde;
+                margin: 20px 0px 20px 0px;
+                font-family: Roboto;
+
+                .input-group-text {
+                    background-color: $cor_verde;
+                }
+
+                .btn.btn-success {
+                    background-color: $cor_verde;
+                    border: 1px solid $cor_verde;
+                    border-radius: 5px 5px 5px 5px;
+                }
+
+                .wats {
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    // Fim do estilo da página de adicionar dispositivos
+
+    footer {
+        margin-top: auto;
+
+        .rodape {
+            background-color: $cor_preta;
+            color: $cor_verde;
+
+            .texto_rodape{
+                margin-top: 5px;
+                font-size: 12px;
+                text-align: right;
+            }
+        }
+    }
+}
