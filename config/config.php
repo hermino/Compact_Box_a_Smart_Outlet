@@ -1,12 +1,12 @@
 <?php
-/* 
+/*
  * Database Connection Settings
  */
 
 $localhost=array(
     'driver' => 'mysql',
     'host' => 'localhost',
-    'dbname' => 'teste',
+    'dbname' => 'compactbox',
     'username' => 'root',
     'password' => '');
-?>
+

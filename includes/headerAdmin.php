@@ -16,15 +16,13 @@
                 <h4 class="compact-box">Compact Box</h4>
             </div>
             <div class="col-md-1 sair">
-                <a class="nav-link" href=""><i class="fas fa-sign-out-alt"></i></a>
+                <a class="nav-link" href="./controle/logout.php"><i class="fas fa-sign-out-alt"></i></a>
             </div>
         </div>
         <div class="row segunda">
             <div class="col-md-5">
                 <nav class="nav">
                     <div class="row">
-                        <a class="nav-link" href="./index.php">Inicio</a>
-                        <a class="nav-link" href="./cadastro.php">Cadastro</a>
                         <a class="nav-link" href="./operacoes.php">Operações</a>
                         <a class="nav-link monitor" href="#">Manitoramento</a>
                     </div>

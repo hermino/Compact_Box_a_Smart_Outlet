@@ -24,9 +24,9 @@ body {
     body .container-fluid.pg-header-admin .row.segunda {
       background-color: #444444; }
       body .container-fluid.pg-header-admin .row.segunda .col-md-5 .nav .nav-link {
-        border-right: 2px solid #72bb53;
         text-align: center;
-        color: #72bb53; }
+        color: #72bb53;
+        font-size: 12px; }
   body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro {
     background-color: #444444;
     color: #72bb53;
@@ -53,20 +53,24 @@ body {
       background-color: #72bb53;
       border: 1px solid #72bb53;
       border-radius: 5px 5px 5px 5px; }
-  body .pg-add-dpv .row.segunda .card.formulario-opr-dpv {
+  body .pg-add-dpv .row.primeira .card.formulario-add-conf-dpv {
     background-color: #444444;
     color: #72bb53;
-    margin: 20px 0px 20px 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-family: Roboto; }
-    body .pg-add-dpv .row.segunda .card.formulario-opr-dpv .input-group-text {
+    body .pg-add-dpv .row.primeira .card.formulario-add-conf-dpv .input-group-text {
       background-color: #72bb53; }
-    body .pg-add-dpv .row.segunda .card.formulario-opr-dpv .btn.btn-success {
+    body .pg-add-dpv .row.primeira .card.formulario-add-conf-dpv .wats {
+      font-size: 12px;
+      font-weight: bold; }
+    body .pg-add-dpv .row.primeira .card.formulario-add-conf-dpv .btn.btn-success {
       background-color: #72bb53;
       border: 1px solid #72bb53;
       border-radius: 5px 5px 5px 5px; }
-    body .pg-add-dpv .row.segunda .card.formulario-opr-dpv .wats {
-      font-size: 12px;
-      font-weight: bold; }
+    body .pg-add-dpv .row.primeira .card.formulario-add-conf-dpv .checkbox {
+      width: 20px;
+      height: 20px; }
   body footer {
     margin-top: auto; }
     body footer .rodape {

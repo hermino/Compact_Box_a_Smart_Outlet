@@ -15,18 +15,16 @@ body {
       body .pg-header .primeira .col-md-9 h3 {
         padding: 10px 5px; }
     body .pg-header .primeira .col-md-3 .nav .nav-link {
-      border-left: 2px solid #444444;
       text-align: center;
       color: #444444; }
     body .pg-header .primeira .col-md-3 .nav .login {
       padding: 20px; }
     body .pg-header .primeira .col-md-3 .nav .cadastro {
-      border-right: 2px solid #444444;
       padding: 20px; }
   body .pg-header .segunda {
     background-color: #444444; }
     body .pg-header .segunda .col-md-9 .nav .nav-link {
-      border-right: 2px solid #72bb53;
+      font-size: 12px;
       text-align: center;
       color: #72bb53; }
   body .pg-login .primeira .box-1 {
@@ -47,6 +45,21 @@ body {
           background-color: #72bb53; }
       body .pg-login .primeira .box-2 .card .card-body .btn-entrar {
         background-color: #72bb53; }
+  body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro {
+    background-color: #444444;
+    color: #72bb53;
+    font-family: Roboto;
+    margin: 20px 0px 20px 0px; }
+    body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro .btn-entrar {
+      background-color: #72bb53;
+      border: 1px solid #72bb53;
+      border-radius: 5px 5px 5px 5px; }
+    body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro .input-group-text {
+      background-color: #72bb53; }
+    body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro .btn-cadastrar {
+      background-color: #72bb53; }
+    body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro .btn-limpar {
+      background-color: #72bb53; }
 
 footer {
   margin-top: auto; }

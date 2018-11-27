@@ -43,8 +43,6 @@ body {
             .nav-link{
                 text-decoration: none;
                 margin-top: 15px;
-
-
             }
         }
 
@@ -56,10 +54,9 @@ body {
                 .nav {
 
                     .nav-link {
-                        border-right: 2px solid $cor_verde;
                         text-align: center;
                         color: $cor_verde;
-
+                        font-size: 12px;
                     }
                 }
             }
@@ -125,18 +122,21 @@ body {
                 }
             }
 
-        }
-
-        .row.segunda {
-
-            .card.formulario-opr-dpv {
+            .card.formulario-add-conf-dpv {
                 background-color: $cor_preta;
                 color: $cor_verde;
-                margin: 20px 0px 20px 0px;
+                margin-top: 20px;
+                margin-bottom: 20px;
                 font-family: Roboto;
 
                 .input-group-text {
                     background-color: $cor_verde;
+                }
+
+                .wats {
+                    font-size: 12px;
+                    font-weight: bold;
+
                 }
 
                 .btn.btn-success {
@@ -145,11 +145,12 @@ body {
                     border-radius: 5px 5px 5px 5px;
                 }
 
-                .wats {
-                    font-size: 12px;
-                    font-weight: bold;
+                .checkbox {
+                    width: 20px;
+                    height: 20px;
                 }
             }
+
         }
     }
     // Fim do estilo da página de adicionar dispositivos
