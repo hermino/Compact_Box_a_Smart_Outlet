@@ -28,7 +28,7 @@ $database = new DBConnection($localhost);
                             <!-- botoes de limpar e cadastrar -->
                         </div>
                         <div>
-                            <input type="submit" title="Clique para cadastrar" value="Verificar" class="btn btn-success btn-cadastrar">
+                            <input type="submit" title="Clique para cadastrar" value="Vincular" class="btn btn-success btn-cadastrar">
                             <input type="reset"  title="Clique para limpar os campos" value="Limpar" class="btn btn-success btn-limpar">
                         </div>
                     </form>
@@ -73,7 +73,7 @@ $database = new DBConnection($localhost);
 
                                     foreach ($rows_dois as $row) {
                                     ?>
-                                    <option><?php echo $row['config_id'] . " - " . $row['config_eletronico']; ?></option>
+                                    <option><?php echo $row['config_eletronico']; ?></option>
                                     <?php
                                     }
                                     ?>
@@ -84,7 +84,7 @@ $database = new DBConnection($localhost);
                         </div>
                         <br>
                         <div>
-                            <input type="submit" title="Clique para cadastrar" value="Atualizar" class="btn btn-success btn-cadastrar">
+                            <input type="submit" title="Clique para cadastrar" value="Selecionar" class="btn btn-success btn-cadastrar">
                             <input type="reset"  title="Clique para limpar os campos" value="Limpar" class="btn btn-success btn-limpar">
                         </div>
                     </form>
@@ -103,7 +103,7 @@ $database = new DBConnection($localhost);
                         <div class="row">
                             <div class="col-md-12">
                                 <label>Selecione a configuracao</label>
-                                <select name="dispositivo" class="custom-select">
+                                <select name="dispositivo" class="custom-select dispositivos">
                                     <?php
                                     $sql_tres = "SELECT * FROM configuracao WHERE usuario_usu_id = {$_SESSION['usu_id']}";
                                     $rows_tres = $database->getQuery($sql_tres);
@@ -155,7 +155,7 @@ $database = new DBConnection($localhost);
                             </div>
                            
                             <div>
-                                <input type="submit" title="Clique para atualizar" value="Cadastrar" class="btn btn-success btn-entrar btn-cadastrar">
+                                <input type="submit" title="Clique para atualizar" value="Atualizar" class="btn btn-success btn-entrar btn-cadastrar">
                                 <input type="reset"  title="Clique para limpar os campos" value="Limpar" class="btn btn-success btn-entrar btn-limpar">
                             </div>
 

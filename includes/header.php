@@ -25,8 +25,7 @@
         <div class="row segunda">
             <div class="col-md-9">
                 <nav class="nav">
-                    <a class="nav-link" href="./index.php">Inicio</a>
-                    <a class="nav-link" href="./bancodedados.php">Query's</a>
+                    <a class="nav-link" href="./index.php">Inicio</a>                    
                 </nav>
             </div>
         </div>

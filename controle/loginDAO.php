@@ -8,7 +8,6 @@ $database = new DBConnection($localhost);      // Create new connection by passi
 session_start();
 
 if (empty($_POST['usuario']) || empty($_POST['senha'])) {
-    echo 'Entrei aqui man';
     header('Location: ../login.php');
     exit();
 }

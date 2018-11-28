@@ -60,6 +60,21 @@ body {
       background-color: #72bb53; }
     body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro .btn-limpar {
       background-color: #72bb53; }
+  body .pg-pesquisa .row .col-md-12 .card.formulario-pesquisa {
+    background-color: #444444;
+    color: #72bb53;
+    font-family: Roboto;
+    margin: 20px 0px 20px 0px; }
+    body .pg-pesquisa .row .col-md-12 .card.formulario-pesquisa .btn-entrar {
+      background-color: #72bb53;
+      border: 1px solid #72bb53;
+      border-radius: 5px 5px 5px 5px; }
+    body .pg-pesquisa .row .col-md-12 .card.formulario-pesquisa .input-group-text {
+      background-color: #72bb53; }
+    body .pg-pesquisa .row .col-md-12 .card.formulario-pesquisa .btn-cadastrar {
+      background-color: #72bb53; }
+    body .pg-pesquisa .row .col-md-12 .card.formulario-pesquisa .btn-limpar {
+      background-color: #72bb53; }
 
 footer {
   margin-top: auto; }

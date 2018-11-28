@@ -16,7 +16,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text " id="basic-addon1"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input name="nome" required="required" title="Informe seu nome Completo" type="text" name="nome" class="form-control" placeholder="Seu nome">
+                                <input name="nome" required="required" title="Informe seu nome Completo" type="text" class="form-control" placeholder="Seu nome">
                             </div>
 
                             <!-- senha do usuario -->
@@ -24,7 +24,7 @@
                                 <div class="input-group-prepend ">
                                     <span class="input-group-text " id="basic-addon1"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input name="senha" required="required" title="Informe sua senha" type="password" name="senha" class="form-control" placeholder="Sua senha">
+                                <input name="senha" required="required" title="Informe sua senha" type="password" class="form-control" placeholder="Sua senha">
                             </div>
 
                             <!-- confirmar senha -->
@@ -32,7 +32,7 @@
                                 <div class="input-group-prepend ">
                                     <span class="input-group-text " id="basic-addon1"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input name="confSenha" required="" title="Confirme a sua senha" type="password" name="confSenha" class="form-control" placeholder="Confirmar senha">
+                                <input name="confSenha" required="" title="Confirme a sua senha" type="password" class="form-control" placeholder="Confirmar senha">
                             </div>
 
                             <!-- Email do usuario -->
@@ -40,7 +40,7 @@
                                 <div class="input-group-prepend ">
                                     <span class="input-group-text " id="basic-addon1"><i class="fas fa-at"></i></span>
                                 </div>
-                                <input name="email" required="" title="Informe seu E-mail" type="email" name="email" class="form-control" placeholder="seu E-mail">
+                                <input name="email" required="" title="Informe seu E-mail" type="email" class="form-control" placeholder="seu E-mail">
                             </div>
 
                             <div class="row">
