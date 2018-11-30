@@ -23,15 +23,17 @@ body {
     .container-fluid.pg-header-admin {
         background-color: $cor_verde;
 
-        .compact-box {
+        .col-md-1 {
+            margin-top: 8px;
+        }
+
+        h3 {
             font-family: Lato;
             color: $cor_preta;
-            margin-top: 4px;
-            padding: 16px 10px;
+            padding: 3px 5px;
         }
 
         .sair {
-
             a:link {
                 color: $cor_preta;
             }
@@ -42,7 +44,7 @@ body {
 
             .nav-link{
                 text-decoration: none;
-                margin-top: 15px;
+                padding: 7px;
             }
         }
 

@@ -7,41 +7,8 @@ session_start();
 <section class="container-fluid pg-login">
     <div class="row primeira">
 
-        <div class="col-md-2"></div>
-
-        <div class="col-md-4 box-1">
-            <!--<div class="row">
-                <div class="card-columns">
-                    <div class="card">
-                        <img class="card-img-top" src="./img/gastos.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h6 class="card-title">Tenha controle sobre os seus gastos</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="card-columns">
-                    <div class="card">
-                        <img class="card-img-top" src="./img/economia.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h6 class="card-title">Economize energia, assim seu bolso agradece e o meio ambiente também</h6>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="card-columns">
-                    <div class="card">
-                        <img class="card-img-top" src="./img/controle.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h6 class="card-title">Controle tudo remotamente pela aplicação do Compact Box</h6>
-                        </div>
-                    </div>
-                </div>
-            -->
+        <div class="col-md-6 box-1">
+            <img src="img/fundologin.png" class="img-fluid" alt="Dicas">
         </div>
 
         <div class="col-md-4 box-2">

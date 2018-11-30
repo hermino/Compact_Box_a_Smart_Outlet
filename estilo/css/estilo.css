@@ -9,26 +9,29 @@ body {
   min-height: 100%; }
   body .pg-header .primeira {
     background-color: #72bb53; }
-    body .pg-header .primeira .col-md-9 {
+    body .pg-header .primeira .col-md-1 {
+      margin-top: 8px; }
+    body .pg-header .primeira .col-md-8 {
       font-family: Lato;
       color: #444444; }
-      body .pg-header .primeira .col-md-9 h3 {
-        padding: 10px 5px; }
+      body .pg-header .primeira .col-md-8 h3 {
+        margin-top: 1px;
+        padding: 3px 5px; }
     body .pg-header .primeira .col-md-3 .nav .nav-link {
       text-align: center;
       color: #444444; }
     body .pg-header .primeira .col-md-3 .nav .login {
-      padding: 20px; }
+      padding: 10px; }
     body .pg-header .primeira .col-md-3 .nav .cadastro {
-      padding: 20px; }
+      padding: 10px; }
   body .pg-header .segunda {
     background-color: #444444; }
     body .pg-header .segunda .col-md-9 .nav .nav-link {
       font-size: 12px;
       text-align: center;
       color: #72bb53; }
-  body .pg-login .primeira .box-1 {
-    margin-top: 100px; }
+  body .pg-login .primeira .box-1 .img-fluid {
+    margin-top: 70px; }
   body .pg-login .primeira .box-2 {
     margin-top: 100px; }
     body .pg-login .primeira .box-2 .card .card-header {
@@ -60,21 +63,10 @@ body {
       background-color: #72bb53; }
     body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro .btn-limpar {
       background-color: #72bb53; }
-  body .pg-pesquisa .row .col-md-12 .card.formulario-pesquisa {
-    background-color: #444444;
-    color: #72bb53;
-    font-family: Roboto;
-    margin: 20px 0px 20px 0px; }
-    body .pg-pesquisa .row .col-md-12 .card.formulario-pesquisa .btn-entrar {
-      background-color: #72bb53;
-      border: 1px solid #72bb53;
-      border-radius: 5px 5px 5px 5px; }
-    body .pg-pesquisa .row .col-md-12 .card.formulario-pesquisa .input-group-text {
-      background-color: #72bb53; }
-    body .pg-pesquisa .row .col-md-12 .card.formulario-pesquisa .btn-cadastrar {
-      background-color: #72bb53; }
-    body .pg-pesquisa .row .col-md-12 .card.formulario-pesquisa .btn-limpar {
-      background-color: #72bb53; }
+  body .pg-inicio .row .col-md-6 p {
+    text-align: justify; }
+  body .pg-inicio .row .col-md-6 .fonte {
+    font-size: 12px; }
 
 footer {
   margin-top: auto; }

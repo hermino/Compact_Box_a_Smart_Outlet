@@ -9,18 +9,19 @@ body {
   min-height: 100%; }
   body .container-fluid.pg-header-admin {
     background-color: #72bb53; }
-    body .container-fluid.pg-header-admin .compact-box {
+    body .container-fluid.pg-header-admin .col-md-1 {
+      margin-top: 8px; }
+    body .container-fluid.pg-header-admin h3 {
       font-family: Lato;
       color: #444444;
-      margin-top: 4px;
-      padding: 16px 10px; }
+      padding: 3px 5px; }
     body .container-fluid.pg-header-admin .sair a:link {
       color: #444444; }
     body .container-fluid.pg-header-admin .sair a:visited {
       color: #444444; }
     body .container-fluid.pg-header-admin .sair .nav-link {
       text-decoration: none;
-      margin-top: 15px; }
+      padding: 7px; }
     body .container-fluid.pg-header-admin .row.segunda {
       background-color: #444444; }
       body .container-fluid.pg-header-admin .row.segunda .col-md-5 .nav .nav-link {

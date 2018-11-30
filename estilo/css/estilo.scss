@@ -17,12 +17,15 @@ body {
 
         .primeira {
             background-color: $cor_verde;
-
-            .col-md-9 {
+            .col-md-1 {
+                margin-top: 8px;
+            }
+            .col-md-8 {
                 font-family: Lato;
                 color: $cor_preta;
                 h3 {
-                    padding: 10px 5px;
+                    margin-top: 1px;
+                    padding: 3px 5px;
                 }
             }
 
@@ -35,11 +38,11 @@ body {
                     }
 
                     .login {
-                        padding: 20px;
+                        padding: 10px;
                     }
 
                     .cadastro {
-                        padding: 20px;
+                        padding: 10px;
                     }
 
                 }
@@ -66,8 +69,10 @@ body {
         .primeira {
 
             .box-1 {
-                margin-top: 100px;
-
+                
+                .img-fluid {
+                    margin-top: 70px;    
+                }
             }
 
             .box-2 {
@@ -139,33 +144,16 @@ body {
         }
     }
     
-    .pg-pesquisa {
+    .pg-inicio {
+        
         .row {
-            .col-md-12 {
-
-                .card.formulario-pesquisa {
-                    background-color: $cor_preta;
-                    color: $cor_verde;
-                    font-family: Roboto;
-                    margin: 20px 0px 20px 0px;
-
-                    .btn-entrar {
-                        background-color: $cor_verde;
-                        border: 1px solid $cor_verde;
-                        border-radius: 5px 5px 5px 5px;
-                    }
-
-                    .input-group-text {
-                        background-color: $cor_verde;
-                    }
-
-                    .btn-cadastrar {
-                        background-color: $cor_verde;
-                    }
-
-                    .btn-limpar {
-                        background-color: $cor_verde;
-                    }
+            .col-md-6 {
+                
+                p {
+                   text-align: justify; 
+                }
+                .fonte {
+                    font-size: 12px;
                 }
             }
         }

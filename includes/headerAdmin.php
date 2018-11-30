@@ -12,8 +12,11 @@
 <body>
     <header class="container-fluid pg-header-admin">
         <div class="row primeira">
-            <div class="col-md-11">
-                <h4 class="compact-box">Compact Box</h4>
+            <div class="col-md-1">
+                <img style="width: 2rem;" class="rounded float-right" src="./img/logo.png">
+            </div>
+            <div class="col-md-10">
+                <h3>Compact Box</h3>
             </div>
             <div class="col-md-1 sair">
                 <a class="nav-link" href="./controle/logout.php"><i class="fas fa-sign-out-alt"></i></a>
@@ -24,7 +27,7 @@
                 <nav class="nav">
                     <div class="row">
                         <a class="nav-link" href="./operacoes.php">Operações</a>
-                        <a class="nav-link monitor" href="#">Manitoramento</a>
+                        <a class="nav-link monitor" href="./monitoramento.php">Manitoramento</a>
                     </div>
                 </nav>
             </div>

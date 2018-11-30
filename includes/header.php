@@ -12,7 +12,11 @@
 <body>
     <header class="container-fluid pg-header">
         <div class="row primeira">
-            <div class="col-md-9">
+            <div class="col-md-1">
+                <img style="width: 2rem;" class="rounded float-right" src="./img/logo.png">
+            </div>
+            <div class="col-md-8">
+                
                 <h3>Compact Box</h3>
             </div>
             <div class="col-md-3 row justify-content-md-end">
