@@ -157,6 +157,22 @@ body {
     }
     // Fim do estilo da página de adicionar dispositivos
 
+    .pg-monitoramento {
+        .card {
+                background-color: $cor_preta;
+                color: $cor_verde;
+                margin-top: 20px;
+                font-family: Roboto;
+
+                .input-group-text {
+                    background-color: $cor_verde;
+                }
+
+                
+            }
+    }
+    
+    
     footer {
         margin-top: auto;
 

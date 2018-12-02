@@ -4,12 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/compactbox/controle/addConfDispositivo.php</file>
-            <file>file:/C:/xampp/htdocs/compactbox/controle/selecionarDispositivoDAO.php</file>
-            <file>file:/C:/xampp/htdocs/compactbox/cadastro.php</file>
+            <file>file:/C:/xampp/htdocs/compactbox/index.php</file>
+            <file>file:/C:/xampp/htdocs/compactbox/includes/headerAdmin.php</file>
             <file>file:/C:/xampp/htdocs/compactbox/estilo/css/estilo.scss</file>
-            <file>file:/C:/xampp/htdocs/compactbox/controle/cadastrarDAO.php</file>
+            <file>file:/C:/xampp/htdocs/compactbox/includes/header.php</file>
             <file>file:/C:/xampp/htdocs/compactbox/operacoes.php</file>
             <file>file:/C:/xampp/htdocs/compactbox/estilo/css/estiloAdmin.scss</file>
+            <file>file:/C:/xampp/htdocs/compactbox/controle/editarConfDispositivo.php</file>
         </group>
     </open-files>
 </project-private>

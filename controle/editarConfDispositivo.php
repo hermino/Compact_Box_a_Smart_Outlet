@@ -7,18 +7,19 @@ require_once('../classes/DBConnection.php');
 $database = new DBConnection($localhost);      // Create new connection by passing in your configuration array
 session_start();
 
+$dispositivo = $_POST['dispositivo'];
 $tensao = $_POST['tensao'];
 $localizacao = $_POST['localizacao'];
-$taxa = $_POST['wats'];
+$wats = $_POST['wats'];
 $eletronico = $_POST['eletronico'];
 
-if (!$tensao && !$localizacao && !$wats && !$eletronico) {
+
+if (!$dispositivo && !$tensao && !$localizacao && !$wats && !$eletronico) {
     //campos em branco
     header('Location: ../operacoes.php');
 } else {
-    echo $taxa;
-    $sql = "INSERT INTO configuracao (config_eletronico, config_tensao, config_localizacao, config_taxa, usuario_usu_id) VALUES ('".$eletronico."', '".$tensao."', '".$localizacao."','".$taxa."','".$_SESSION['usu_id']."')";
+    $sql = "UPDATE configuracao SET config_eletronico = '{$eletronico}', config_tensao = $tensao, config_localizacao = '{$localizacao}', config_taxa = $wats WHERE config_id = '{$dispositivo}' AND usuario_usu_id = {$_SESSION['usu_id']}";
     $count = $database->runQuery($sql);
     
-    //header('Location: ../operacoes.php');
+    header('Location: ../operacoes.php');
 }

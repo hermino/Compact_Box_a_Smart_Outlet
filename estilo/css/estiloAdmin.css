@@ -72,6 +72,13 @@ body {
     body .pg-add-dpv .row.primeira .card.formulario-add-conf-dpv .checkbox {
       width: 20px;
       height: 20px; }
+  body .pg-monitoramento .card {
+    background-color: #444444;
+    color: #72bb53;
+    margin-top: 20px;
+    font-family: Roboto; }
+    body .pg-monitoramento .card .input-group-text {
+      background-color: #72bb53; }
   body footer {
     margin-top: auto; }
     body footer .rodape {

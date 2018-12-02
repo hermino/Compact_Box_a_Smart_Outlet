@@ -15,8 +15,7 @@ if (empty($_POST['usuario']) || empty($_POST['senha'])) {
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 
-$sql = "SELECT usu_id FROM usuario WHERE usu_username = '$usuario' AND usu_senha = $senha";
-
+$sql = "SELECT usu_id FROM usuario WHERE usu_username = '$usuario' AND usu_senha = '$senha'";
 $rows = $database->getQuery($sql);
 
 

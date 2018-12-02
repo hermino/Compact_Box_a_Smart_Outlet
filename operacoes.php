@@ -13,7 +13,6 @@ $database = new DBConnection($localhost);
             <div class="card formulario-add-dpv">
                 <h5 class="card-header">Verificar Dispositivo</h5>
                 <div class="card-body">
-
                     <form method="post" action="controle/dispoditivoDAO.php">
                         <div class="row">
                             <div class="col-md-12">
@@ -98,7 +97,7 @@ $database = new DBConnection($localhost);
                 <h5 class="card-header">Editar uma Configuração</h5>
                 <div class="card-body">
 
-                    <form method="post" action="" >
+                    <form method="post" action="controle/editarConfDispositivo.php" >
 
                         <div class="row">
                             <div class="col-md-12">
@@ -109,7 +108,7 @@ $database = new DBConnection($localhost);
                                     <?php
                                     $sql_tres = "SELECT * FROM configuracao WHERE usuario_usu_id = {$_SESSION['usu_id']}";
                                     $rows_tres = $database->getQuery($sql_tres);
-                                    echo "<option> </option>";
+                                    //echo "<option> </option>";
 
                                     foreach ($rows_tres as $row) {
                                         echo "<option value='" . $row['config_id'] . "'";
@@ -162,9 +161,9 @@ $database = new DBConnection($localhost);
                                 <!-- senha do usuario -->
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend ">
-                                        <span class="input-group-text wats" id="basic-addon1">W/hr</span>
+                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-file-invoice-dollar"></i></span>
                                     </div>
-                                    <input name="wats" value="<?php echo $taxa; ?>"class="form-control" title="Wats por hora" type="text" placeholder="Wats">
+                                    <input name="wats" value="<?php echo $taxa; ?>"class="form-control" title="Wats por hora" type="text" placeholder="Taxa">
                                 </div>
 
                                 <!-- senha do usuario -->
@@ -193,7 +192,7 @@ $database = new DBConnection($localhost);
                 </div>
             </div>
             <div class="card formulario-add-conf-dpv">
-                <h5 class="card-header">Adicionar uma Configuraçãode </h5>
+                <h5 class="card-header">Adicionar uma Configuração</h5>
                 <div class="card-body">
 
                     <form method="post" action="controle/addConfDispositivo.php" >
@@ -218,9 +217,9 @@ $database = new DBConnection($localhost);
                                 <!-- senha do usuario -->
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend ">
-                                        <span class="input-group-text wats" id="basic-addon1">W/hr</span>
+                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-file-invoice-dollar"></i></span>
                                     </div>
-                                    <input name="wats" class="form-control" title="Wats por hora" type="text" placeholder="Wats">
+                                    <input name="wats" class="form-control" title="Wats por hora" type="text" placeholder="Taxa">
                                 </div>
 
                                 <!-- senha do usuario -->
