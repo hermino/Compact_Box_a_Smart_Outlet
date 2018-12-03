@@ -66,6 +66,7 @@ Class DBConnection {
 
             try {
                 $this->dbc = new PDO($dsn, $this->_config['username'], $this->_config['password']);
+                $this->dbc->exec("SET NAMES utf8");
             } catch (PDOException $e) {
                 echo __LINE__ . $e->getMessage();
             }
@@ -97,7 +98,7 @@ Class DBConnection {
     public function getQuery($sql) {
         $stmt = $this->dbc->query($sql);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
+        
         return $stmt;
     }
 

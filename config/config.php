@@ -2,6 +2,7 @@
 /*
  * Database Connection Settings
  */
+//include('../controle/verificaLogin.php');
 
 $localhost=array(
     'driver' => 'mysql',

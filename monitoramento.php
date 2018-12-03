@@ -36,9 +36,7 @@ $database = new DBConnection($localhost);
                                         $sql_um = "SELECT dpv_id FROM dispositivo WHERE usuario_usu_id = {$_SESSION['usu_id']} AND config_ativa = {$_GET['eletronico']}";
                                         $rows_um = $database->getQuery($sql_um);
 
-                                        foreach ($rows_um as $row) {
-                                            $dispositivo = $row['dpv_id'];
-                                        }
+                                        
 
                                         $gastos = 0;
                                         $sql_quatro = "SELECT gts_total FROM gastos g INNER JOIN dispositivo d ON g.dispositivo_dpv_id = d.dpv_id INNER JOIN configuracao c ON d.config_ativa = c.config_id WHERE g.usuario_usu_id = {$_SESSION['usu_id']} AND c.config_id = {$_GET['eletronico']};";
@@ -51,27 +49,44 @@ $database = new DBConnection($localhost);
                                     }
                                     ?>
 
-                                    <label>Selecione o dispositivo</label>
-                                    <select name="dispositivo" class="custom-select">
-                                        <option>
-                                            <?php
-                                            if($dispositivo){
-                                                 echo $dispositivo;
-                                            }else {
-                                                echo " ";
+                                    <label>Selecione uma data</label>
+                                    <select id="data" onchange="getEletronicoData()" name="dispositivo" class="custom-select">
+                                        <?php
+                                            if(isset($_GET['eletronico'])){
+                                                $sql_usuario_dispositivo = "SELECT * FROM dispositivo INNER JOIN usuario ON dispositivo.usuario_usu_id = usuario.usu_id INNER JOIN configuracao ON dispositivo.config_ativa = configuracao.config_id WHERE usuario.usu_id = {$_SESSION['usu_id']} AND configuracao.config_id = {$_GET['eletronico']}";
+                                                $return_usuario_dispositivo = $database->getQuery($sql_usuario_dispositivo);
+                                                foreach ($return_usuario_dispositivo as $row) {
+                                                    $usu_disp_config = $row;
+                                                }
                                             }
-                                        
-                                            ?></option>
+                                            echo "<option value='xxx'> </option>";
+                                            $path = "logs/".$usu_disp_config['usu_id']."/".$usu_disp_config['dpv_id'];
+                                            if(file_exists($path)){
+                                                $diretorio = dir($path);
+                                                while($arquivo = $diretorio -> read()){
+                                                    if($arquivo != '.' && $arquivo != '..'){
+                                                        echo "<option";
+                                                        if(isset($_GET['data'])){
+                                                            if($_GET['data'] == substr_replace($arquivo, "", -4)){
+                                                                echo " selected";
+                                                            }
+                                                        }
+                                                        echo "> ".substr_replace($arquivo, "", -4)."</option>";
+                                                    }
+                                                }
+                                                $diretorio -> close();
+                                            } 
+                                        ?>
                                     </select>
                                     <br><br>
                                     <label>Selecione a configuracao</label>
 
-                                    <select id="o" onchange="teste()" name="configuracao" class="custom-select dispositivos">
+                                    <select id="eletronico" onchange="getEletronico()" name="configuracao" class="custom-select dispositivos">
 
                                         <?php
                                         $sql_tres = "SELECT * FROM configuracao WHERE usuario_usu_id = {$_SESSION['usu_id']}";
                                         $rows_tres = $database->getQuery($sql_tres);
-                                        //echo "<option> </option>";
+                                        echo "<option value='xxx'> </option>";
 
                                         foreach ($rows_tres as $row) {
                                             echo "<option value='" . $row['config_id'] . "'";
@@ -91,14 +106,14 @@ $database = new DBConnection($localhost);
                                         <div class="input-group-prepend ">
                                             <span class="input-group-text " id="basic-addon1"><i class="fas fa-hand-holding-usd"></i></span>
                                         </div>
-                                        <input name="gasto" value="<?php echo 'R$ ' . $gastos; ?>" class="form-control" title="Total Gasto" type="text">
+                                        <input id="gasto" name="gasto" value="" class="form-control" title="Total Gasto" type="text">
                                     </div>
 
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend ">
                                             <span class="input-group-text " id="basic-addon1"><i class="fas fa-bolt"></i></span>
                                         </div>
-                                        <input name="tensao" value="<?php echo $tensao; ?>" class="form-control" title="ID do dispositivo" type="text">
+                                        <input name="tensao" value="<?php echo $tensao." V"; ?>" class="form-control" title="ID do dispositivo" type="text">
                                     </div>
 
                                     <div class="input-group mb-3">
@@ -109,9 +124,21 @@ $database = new DBConnection($localhost);
                                     </div>
 
                                     <script>
-                                        function teste() {
-                                            var x = document.getElementById("o");
-                                            window.location = '?eletronico=' + x.value;
+                                        function getEletronico() {
+                                            var x = document.getElementById("eletronico");
+                                            if(x.value != "xxx"){
+                                                window.location = '?eletronico=' + x.value;
+                                            }
+                                        }
+                                        
+                                        function getEletronicoData() {
+                                            var x = document.getElementById("data");
+                                            if(x.value != "xxx"){
+                                                var url_string = window.location.href;
+                                                var url = new URL(url_string);
+                                                var eletronico = url.searchParams.get("eletronico");
+                                                window.location = '?eletronico=' + eletronico + "&data=" + x.value;
+                                            }
                                         }
                                     </script>
                                 </div>
@@ -137,75 +164,145 @@ $database = new DBConnection($localhost);
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 <?php
-if (($handle = fopen("logs/dados.csv", "r")) !== FALSE) {
-    while ($data = fgetcsv($handle, 1000, ",")) {
-        $leitura[] = [
-            'corrente' => $data[0],
-            'time' => $data[1]
-        ];
+$carregagrafico = 0;
+if(isset($_GET['eletronico']) && isset($_GET['data'])){
+    if (($handle = fopen("logs/".$usu_disp_config['usuario_usu_id']."/".$usu_disp_config['dpv_id']."/".$_GET['data'].".csv", "r")) !== FALSE) {
+        while ($data = fgetcsv($handle, 1000, ",")) {
+            $leitura[] = [
+                'corrente' => $data[0],
+                'tensao'   => $data[1],
+                'time'     => $data[3]
+            ];
+        }
+        $carregagrafico = 1;
+        fclose($handle);
     }
 }
-fclose($handle);
 
 echo "
 	<script>
 		var ctx = document.getElementsByClassName('line-chart');
-		var chartGraph = new Chart(ctx, {
-                                                    type: 'line', 
-                                                    data: {
-                                                    labels: 
-                                                    [
+		var chartGraph = new Chart(ctx, 
+                {
+                    type: 'line', 
+                    data: {
+                            labels: 
+                                    [
 	 ";
-$c = 0;
-foreach ($leitura as $linha) {
-    if ($c == 0) {
-        echo "'" . $linha['time'] . "'";
-    } else {
-        echo ",'" . $linha['time'] . "'";
-    }
-    $c++;
-}
+                                    $c = 0;
+                                    if($carregagrafico){
+                                        foreach ($leitura as $linha) {
+                                            if ($c == 0) {
+                                                echo "'" . $linha['time'] . "'";
+                                            } else {
+                                                echo ",'" . $linha['time'] . "'";
+                                            }
+                                            $c++;
+                                        }
+                                    }
+
+echo "
+                                    ],
+                            datasets: [
+                                        {
+                                            label: 'CORRENTE (Amperes)',
+                                            data: 
+                                                  [ 
+	 ";
+                                                    $c = 0;
+                                                    if($carregagrafico){
+                                                        foreach ($leitura as $linha) {
+                                                            if ($c == 0) {
+                                                                echo $linha['corrente'];
+                                                            } else {
+                                                                echo "," . $linha['corrente'];
+                                                            }
+                                                            $c++;
+                                                        }
+                                                    }
+
 echo "
                                                     ],
-                                                    datasets: [{
-                                                    label: 'CORRENTE',
-                                                    data: 
-                                                    [ 
+                                            borderWidth: 3,
+                                            borderColor: 'rgba(242,100,0,0.85)',
+                                            backgroundColor: 'rgba(242,100,0,0.85)',
+                                            fill: false,
+                                        },
+                                        {
+                                            label: 'GASTOS (R$)',
+                                            data: 
+                                                  [ 
 	 ";
-$c = 0;
-foreach ($leitura as $linha) {
-    if ($c == 0) {
-        echo $linha['corrente'];
-    } else {
-        echo "," . $linha['corrente'];
-    }
-    $c++;
-}
+                                                    $c = 0;
+                                                    $gasto = 0;
+                                                    if($carregagrafico){
+                                                        foreach ($leitura as $linha) {
+                                                            $gasto = $gasto + $linha['tensao']*$linha['corrente']*$usu_disp_config['config_taxa'];
+                                                            if ($c == 0) {
+                                                                echo $gasto;
+                                                            } else {
+                                                                echo "," . $gasto;
+                                                            }
+                                                            $c++;
+                                                        }
+                                                    }
+
 echo "
                                                     ],
-                                                    borderWidth: 3,
-                                                    borderColor: 'rgba(242,100,0,0.85)',
-                                                    backgroundColor: 'rgba(242,100,0,0.85)',
-                                                    fill: false,
-                                                    }]
-                                                },
-                                                options: {
-                                                    scales:{
-                                                        xAxes: [{
-                                                            scaleLabel:{
-                                                                display: true,
-                                                                labelString: 'Horas'
+                                            borderWidth: 3,
+                                            borderColor: 'rgba(242,242,0,0.85)',
+                                            backgroundColor: 'rgba(242,242,0,0.85)',
+                                            fill: false,
+                                        },
+                                        {
+                                            label: 'POTÊNCIA (Watts)',
+                                            data: 
+                                                  [ 
+	 ";
+                                                    $c = 0;
+                                                    if($carregagrafico){
+                                                        foreach ($leitura as $linha) {
+                                                            if ($c == 0) {
+                                                                echo $linha['corrente']*$linha['tensao'];
+                                                            } else {
+                                                                echo "," . $linha['corrente']*$linha['tensao'];
                                                             }
-                                                        }],
-                                                        yAxes: [{
-                                                            scaleLabel:{
-                                                                display: true,
-                                                                labelString: 'Corrente'
+                                                            $c++;
+                                                        }
+                                                    }
+
+echo "
+                                                    ],
+                                            borderWidth: 3,
+                                            borderColor: 'rgba(14,242,103,0.85)',
+                                            backgroundColor: 'rgba(14,242,103,0.85)',
+                                            fill: false,
+                                        }
+                                      ]
+                         },
+                    options: {
+                               scales:{
+                                        xAxes: [
+                                                {
+                                                 scaleLabel:{
+                                                             display: true,
+                                                             labelString: 'Horas'
                                                             }
-                                                        }]
-                                                    },
                                                 }
-			});
+                                               ],
+                                        yAxes: [
+                                                {
+                                                 scaleLabel:{
+                                                             display: true,
+                                                             labelString: 'Corrente'
+                                                            }
+                                                }
+                                               ]
+                                      },
+                             }
+		});
+        var mudagasto = document.getElementById('gasto');
+        mudagasto.value = 'R$ ".round($gasto,2)."';
         </script>
          ";
 ?>

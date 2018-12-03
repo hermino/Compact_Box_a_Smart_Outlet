@@ -79,6 +79,8 @@ body {
     font-family: Roboto; }
     body .pg-monitoramento .card .input-group-text {
       background-color: #72bb53; }
+    body .pg-monitoramento .card .line-chart {
+      color: white; }
   body footer {
     margin-top: auto; }
     body footer .rodape {

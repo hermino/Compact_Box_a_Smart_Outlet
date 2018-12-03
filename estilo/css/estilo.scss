@@ -89,7 +89,9 @@ body {
 
                     .card-body {
                         background-color: $cor_preta;
-
+                        color: $cor_verde;
+                        font-family: Lato;
+                        
                         .input-group {
                             border: 1px solid $cor_preta;
                             border-radius: 6px 6px 6px 6px;

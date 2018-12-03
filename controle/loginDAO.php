@@ -15,14 +15,20 @@ if (empty($_POST['usuario']) || empty($_POST['senha'])) {
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 
-$sql = "SELECT usu_id FROM usuario WHERE usu_username = '$usuario' AND usu_senha = '$senha'";
+$sql = "SELECT usu_id, usu_funcao FROM usuario WHERE usu_username = '$usuario' AND usu_senha = '$senha'";
 $rows = $database->getQuery($sql);
 
 
 foreach ($rows as $row) {
-    $_SESSION['usu_id'] = $row['usu_id'];
-    header('Location: ../operacoes.php');
-    exit();
+    if (row['usu_funcao'] == 0) {
+        $_SESSION['usu_id'] = $row['usu_id'];
+        header('Location: ../operacoes.php');
+        exit();
+    } else {
+        $_SESSION['usu_id'] = $row['usu_id'];
+        header('Location: ../administrador.php');
+        exit();
+    }
 }
 
 $_SESSION['nao_autenticado'] = true;
