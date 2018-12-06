@@ -75,12 +75,22 @@ body {
   body .pg-monitoramento .card {
     background-color: #444444;
     color: #72bb53;
-    margin-top: 20px;
     font-family: Roboto; }
     body .pg-monitoramento .card .input-group-text {
       background-color: #72bb53; }
     body .pg-monitoramento .card .line-chart {
       color: white; }
+  body .pg-admin .card.form-add-dpv {
+    background-color: #444444;
+    color: #72bb53;
+    margin-top: 20px;
+    font-family: Roboto; }
+    body .pg-admin .card.form-add-dpv .input-group-text {
+      background-color: #72bb53; }
+    body .pg-admin .card.form-add-dpv .btn.btn-success {
+      background-color: #72bb53;
+      border: 1px solid #72bb53;
+      border-radius: 5px 5px 5px 5px; }
   body footer {
     margin-top: auto; }
     body footer .rodape {

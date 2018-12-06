@@ -158,25 +158,44 @@ body {
     // Fim do estilo da página de adicionar dispositivos
 
     .pg-monitoramento {
-        
+
         .card {
-                background-color: $cor_preta;
-                color: $cor_verde;
-                margin-top: 20px;
-                font-family: Roboto;
-                
+            background-color: $cor_preta;
+            color: $cor_verde;
+            font-family: Roboto;
 
-                .input-group-text {
-                    background-color: $cor_verde;
-                }
 
-                .line-chart {
-                    color: white;
-                }
+            .input-group-text {
+                background-color: $cor_verde;
             }
+
+            .line-chart {
+                color: white;
+            }
+        }
     }
-    
-    
+
+    .pg-admin {
+        .card.form-add-dpv {
+            background-color: $cor_preta;
+            color: $cor_verde;
+            margin-top: 20px;
+            font-family: Roboto;
+
+            .input-group-text {
+                background-color: $cor_verde;
+            }
+
+            .btn.btn-success {
+                background-color: $cor_verde;
+                border: 1px solid $cor_verde;
+                border-radius: 5px 5px 5px 5px;
+            }
+        }
+    }
+
+
+
     footer {
         margin-top: auto;
 

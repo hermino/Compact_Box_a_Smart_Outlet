@@ -13,7 +13,7 @@
     <header class="container-fluid pg-header-admin">
         <div class="row primeira">
             <div class="col-md-1">
-                <img style="width: 2rem;" class="rounded float-right" src="./img/logo.png">
+                <img style="width: 2rem;" class="rounded float-right" src="./img/logo.PNG">
             </div>
             <div class="col-md-10">
                 <h3>Compact Box</h3>

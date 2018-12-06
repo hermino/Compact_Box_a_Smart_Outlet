@@ -14,13 +14,15 @@ if (empty($_POST['usuario']) || empty($_POST['senha'])) {
 
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
+echo $usuario;
+echo $senha;
 
 $sql = "SELECT usu_id, usu_funcao FROM usuario WHERE usu_username = '$usuario' AND usu_senha = '$senha'";
 $rows = $database->getQuery($sql);
 
-
+echo $row['usu_funcao'];
 foreach ($rows as $row) {
-    if (row['usu_funcao'] == 0) {
+    if ($row['usu_funcao'] == 0) {
         $_SESSION['usu_id'] = $row['usu_id'];
         header('Location: ../operacoes.php');
         exit();

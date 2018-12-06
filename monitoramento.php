@@ -11,7 +11,7 @@ $database = new DBConnection($localhost);
     <div class="row">
         <div class="col-md-3">
             <div class="row">
-                <div class="card">
+                <div class="card form-detalhes">
                     <h6 class="card-header">Detalhes</h6>
                     <div class="card-body">
                         <form method="post" action="controle/dispoditivoDAO.php">
@@ -49,6 +49,28 @@ $database = new DBConnection($localhost);
                                     }
                                     ?>
 
+                                    
+                                    
+                                    <label>Selecione a configuracao</label>
+                                    <select id="eletronico" onchange="getEletronico()" name="configuracao" class="custom-select dispositivos">
+
+                                        <?php
+                                        $sql_tres = "SELECT * FROM configuracao WHERE usuario_usu_id = {$_SESSION['usu_id']}";
+                                        $rows_tres = $database->getQuery($sql_tres);
+                                        echo "<option value='xxx'> </option>";
+
+                                        foreach ($rows_tres as $row) {
+                                            echo "<option value='" . $row['config_id'] . "'";
+                                            if (isset($_GET['eletronico'])) {
+                                                if ($_GET['eletronico'] == $row['config_id']) {
+                                                    echo "selected";
+                                                }
+                                            }
+                                            echo ">" . $row['config_eletronico'] . "</option>";
+                                        }
+                                        ?>
+                                    </select>
+                                    <br><br>
                                     <label>Selecione uma data</label>
                                     <select id="data" onchange="getEletronicoData()" name="dispositivo" class="custom-select">
                                         <?php
@@ -78,27 +100,6 @@ $database = new DBConnection($localhost);
                                             } 
                                         ?>
                                     </select>
-                                    <br><br>
-                                    <label>Selecione a configuracao</label>
-
-                                    <select id="eletronico" onchange="getEletronico()" name="configuracao" class="custom-select dispositivos">
-
-                                        <?php
-                                        $sql_tres = "SELECT * FROM configuracao WHERE usuario_usu_id = {$_SESSION['usu_id']}";
-                                        $rows_tres = $database->getQuery($sql_tres);
-                                        echo "<option value='xxx'> </option>";
-
-                                        foreach ($rows_tres as $row) {
-                                            echo "<option value='" . $row['config_id'] . "'";
-                                            if (isset($_GET['eletronico'])) {
-                                                if ($_GET['eletronico'] == $row['config_id']) {
-                                                    echo "selected";
-                                                }
-                                            }
-                                            echo ">" . $row['config_eletronico'] . "</option>";
-                                        }
-                                        ?>
-                                    </select>
 
 
                                     <br><br>
@@ -115,7 +116,7 @@ $database = new DBConnection($localhost);
                                         </div>
                                         <input name="tensao" value="<?php echo $tensao." V"; ?>" class="form-control" title="ID do dispositivo" type="text">
                                     </div>
-
+                                    
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend ">
                                             <span class="input-group-text " id="basic-addon1"><i class="fas fa-map-marked-alt"></i></span>
@@ -152,7 +153,7 @@ $database = new DBConnection($localhost);
         <div class="col-md-9" style="width:100%;height:550px;" id="teste">
 
 
-            <div class="card">
+            <div class="card form-grafico">
                 <h6 class="card-header">Gráfico</h6>
                 <div class="card-body">
                     <canvas class="line-chart"></canvas>
