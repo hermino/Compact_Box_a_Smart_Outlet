@@ -65,16 +65,17 @@ body {
       background-color: #72bb53; }
     body .container.pg-cadastro .row .col-md-8 .card.formulario-cadastro .btn-limpar {
       background-color: #72bb53; }
-  body .pg-inicio .row .col-md-6 p {
-    text-align: justify; }
-  body .pg-inicio .row .col-md-6 .fonte {
-    font-size: 12px; }
+  body .pg-inicio .row .col-md-6 {
+    text-align: justify;
+    font-size: 20px; }
+    body .pg-inicio .row .col-md-6 p {
+      text-align: justify; }
 
 footer {
   margin-top: auto; }
   footer .rodape {
     background-color: #444444;
-    color: white; }
+    color: #72bb53; }
     footer .rodape .texto_rodape {
       margin-top: 5px;
       font-size: 12px;

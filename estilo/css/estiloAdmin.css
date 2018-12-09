@@ -80,6 +80,12 @@ body {
       background-color: #72bb53; }
     body .pg-monitoramento .card .line-chart {
       color: white; }
+    body .pg-monitoramento .card .botao {
+      background-color: #72bb53;
+      border: 1px solid #72bb53;
+      border-radius: 5px 5px 5px 5p; }
+      body .pg-monitoramento .card .botao i {
+        color: #444444; }
   body .pg-admin .card.form-add-dpv {
     background-color: #444444;
     color: #72bb53;

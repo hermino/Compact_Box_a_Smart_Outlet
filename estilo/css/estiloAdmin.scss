@@ -172,6 +172,16 @@ body {
             .line-chart {
                 color: white;
             }
+            
+            .botao {
+                background-color: $cor_verde;
+                border: 1px solid $cor_verde;
+                border-radius: 5px 5px 5px 5p;
+                
+                i {
+                    color: $cor_preta;
+                }
+            }
         }
     }
 

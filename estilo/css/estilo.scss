@@ -150,13 +150,15 @@ body {
         
         .row {
             .col-md-6 {
-                
+                text-align: justify; 
+                font-size: 20px;
                 p {
                    text-align: justify; 
                 }
                 .fonte {
-                    font-size: 12px;
+                    
                 }
+                
             }
         }
     }
@@ -168,7 +170,7 @@ footer {
 
     .rodape {
         background-color: $cor_preta;
-        color: white;
+        color: $cor_verde;
 
         .texto_rodape{
             margin-top: 5px;
