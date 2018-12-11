@@ -278,7 +278,7 @@ $c = 0;
 $gasto = 0;
 if ($carregagrafico) {
     foreach ($leitura as $linha) {
-        $gasto = $gasto + $linha['tensao'] * $linha['corrente'] * $usu_disp_config['config_taxa'];
+        $gasto = $gasto + (($linha['tensao'] * $linha['corrente'])/1000) * $usu_disp_config['config_taxa'];
         if ($c == 0) {
             echo $gasto;
         } else {
@@ -304,9 +304,9 @@ $c = 0;
 if ($carregagrafico) {
     foreach ($leitura as $linha) {
         if ($c == 0) {
-            echo $linha['corrente'] * $linha['tensao'];
+            echo (($linha['corrente'] * $linha['tensao'])/1000);
         } else {
-            echo "," . $linha['corrente'] * $linha['tensao'];
+            echo "," . (($linha['corrente'] * $linha['tensao'])/1000);
         }
         $c++;
     }
