@@ -1,4 +1,4 @@
-# Projeto Final ISE Hermino Gabriel 2018
+# Projeto Final Hermino Gabriel 2018
 
 ### Referências:
   
